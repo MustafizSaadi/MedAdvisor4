@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "547451984100",
+    "firebase_url": "https://medadvisor-b0cc4.firebaseio.com",
+    "project_id": "medadvisor-b0cc4",
+    "storage_bucket": "medadvisor-b0cc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547451984100:android:535dae3b805a133c",
+        "android_client_info": {
+          "package_name": "com.example.ludwigprandtl.medadvisor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547451984100-nh1qrqb7q5b7mhgvegqda16d9gvead4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ludwigprandtl.medadvisor",
+            "certificate_hash": "0b8e676f06e4ff03fbbd68e4989bdc0070aebad4"
+          }
+        },
+        {
+          "client_id": "547451984100-a23f9h5dhq6lh2925du44kmr08ojdbm4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkMlTEJvpBdPcL6P6RAoeyWQPotIk_OWs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547451984100-a23f9h5dhq6lh2925du44kmr08ojdbm4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
