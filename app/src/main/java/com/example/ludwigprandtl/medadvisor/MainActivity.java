@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-        //text1.setText("No Symptoms Added");
+     //   text1.setText("No Symptoms Added");
         listView = findViewById(R.id.myTextView) ;
-        // listView.setEmptyView(findViewById(R.id.empty));
+        listView.setEmptyView(findViewById(R.id.empty));
 
 
         Bundle bundle = getIntent().getExtras();
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
 
-            text1.setText("");
+           // text1.setText("");
             ArrayList<String> listData = new ArrayList<>();
             while(cursor.moveToNext()){
                 listData.add(cursor.getString(1));

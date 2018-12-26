@@ -2,29 +2,30 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="22"
-    build-mode="FULL"
+    build-mode="COLD"
     density="xhdpi"
     format="10"
+    ir-eligibility="R_CLASS_CHANGE"
     plugin-version="3.2.1"
-    timestamp="1545828417674"
+    timestamp="1545850603595"
     token="-1014284330356608902"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="19692" />
+        duration="7145" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2294" />
+        duration="689" />
     <task
         name="verifier"
-        duration="1496" />
+        duration="432" />
 
     <artifact
-        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
         type="SPLIT" />
     <artifact
         location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -33,16 +34,13 @@
         location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
     <artifact
-        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
         location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
         type="SPLIT" />
     <artifact
-        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
         type="SPLIT" />
     <artifact
         location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
@@ -51,10 +49,10 @@
         location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
         type="SPLIT" />
     <artifact
-        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
     <artifact
         location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -62,19 +60,19 @@
 
     <build
         build-mode="FULL"
-        timestamp="1545828417674"
+        timestamp="1545849785576"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -86,16 +84,55 @@
             location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1545850603595"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
             location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
