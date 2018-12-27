@@ -16,6 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.PriorityQueue;
@@ -25,12 +27,12 @@ public class ProbableDisease extends AppCompatActivity {
     MyDatabase myDatabase;
     Set<String> list = new HashSet<String>();
     ArrayList<String> SymptomsInDatabase = new ArrayList<>();
-    PriorityQueue<check> pq = new PriorityQueue<>();
+    ArrayList<check> pq = new ArrayList<>();
     DatabaseReference rootRef;
     DatabaseReference databaseReference;
-    String str[] = new String[100];
+    ArrayList<String> str = new ArrayList<>();
     ListView listView;
-    ArrayAdapter adapter;
+    ArrayAdapter<String> adapter;
     check temp;
 
     @Override
@@ -48,9 +50,7 @@ public class ProbableDisease extends AppCompatActivity {
         }
            rootRef = FirebaseDatabase.getInstance().getReference();
           databaseReference = rootRef.child("disease");
-
-        //  fetchFromFirebase();
-        Toast.makeText(ProbableDisease.this, "" + list.size(), Toast.LENGTH_SHORT).show();
+          fetchFromFirebase();
     }
 
     private void fetchFromFirebase() {
@@ -76,23 +76,23 @@ public class ProbableDisease extends AppCompatActivity {
                     pq.add(new check(childSnapShot.child("name").getValue(String.class),cnt));
                     SymptomsInDatabase.clear();
                 }
+                showInActivity();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
         });
-        showInActivity();
     }
     private void showInActivity() {
-       int i=0;
-       while(!pq.isEmpty()){
-           temp = pq.poll();
-           str[i] = new String();
-           str[i++]=temp.getDisease();
-           if(i==3) break;
+        str.clear();
+        Collections.sort(pq,new ValueComparator());
+       for(int i=0;i<3&&i<pq.size();i++){
+           temp = pq.get(i);
+           str.add(temp.getDisease());
+           Toast.makeText(ProbableDisease.this, "" + temp.getDisease(), Toast.LENGTH_SHORT).show();
        }
         listView = findViewById(R.id.ProbableDieases);
-        adapter = new ArrayAdapter(this,R.layout.disease_list,R.id.textViewId,str);
+        adapter = new ArrayAdapter<String>(this,R.layout.disease_list,R.id.textViewId,str);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }

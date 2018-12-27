@@ -30,11 +30,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_width="256dp"
+            android:layout_height="60dp" />
+
+        <ImageButton
             android:id="@+id/send"
-            android:drawableRight="@drawable/ic_send_black_24dp"/>
+            android:layout_width="106dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:background="@color/White"
+            android:src="@drawable/ic_send_black_24dp" />
     </LinearLayout>
 </LinearLayout>

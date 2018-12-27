@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button button,symptoms_button,discardButton;
     TextView text1 ;
     TextView text2;
-    TextView send;
+    ImageButton send;
     ListView listView;
     MyDatabase myDatabase;
     int removingPosition;
@@ -65,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
             send = findViewById(R.id.send);
 
-            showSelectedSymptoms();
             goToDisease();
+            showSelectedSymptoms();
             // deleteSelectedSymptoms();
 
         }
@@ -74,24 +75,14 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("ClickableViewAccessibility")
     private void goToDisease() {
-        send.setOnTouchListener(new View.OnTouchListener() {
+        send.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                final int DRAWABLE_LEFT = 0;
-                final int DRAWABLE_TOP = 1;
-                final int DRAWABLE_RIGHT = 2;
-                final int DRAWABLE_BOTTOM = 3;
-
-                if(event.getAction() == MotionEvent.ACTION_UP) {
-                    if(event.getRawX() >= (send.getRight() - send.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
-                        Intent intent = new Intent(MainActivity.this,ProbableDisease.class);
-                        startActivity(intent);
-
-                        return true;
-                    }
+            public void onClick(View v) {
+                Cursor cursor = myDatabase.readData();
+                if(cursor.getCount()!=0) {
+                    Intent intent = new Intent(MainActivity.this, ProbableDisease.class);
+                    startActivity(intent);
                 }
-                return false;
-
             }
         });
     }
