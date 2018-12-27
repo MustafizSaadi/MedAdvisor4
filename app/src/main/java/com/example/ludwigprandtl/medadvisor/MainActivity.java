@@ -23,12 +23,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     Button button,symptoms_button,discardButton;
-    TextView text1 ;
     TextView text2;
     ImageButton send;
     ListView listView;
     MyDatabase myDatabase;
-    int removingPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +43,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,SearchSymptoms.class);
-                //  intent.putExtra("Database", myDatabase);
                 startActivity(intent);
                 finish();
             }
         });
-     //   text1.setText("No Symptoms Added");
         listView = findViewById(R.id.myTextView) ;
         listView.setEmptyView(findViewById(R.id.empty));
 
@@ -91,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor = myDatabase.readData();
         if(cursor.getCount()==0)
         {
-            //  text1.setText("No Symptoms Added");
             ArrayList<String> listData = new ArrayList<>();
             CustomAdapter custom = new CustomAdapter(this,listData,listData.size());
             listView.setAdapter(custom);
@@ -101,8 +96,6 @@ public class MainActivity extends AppCompatActivity {
         else
         {
 
-
-           // text1.setText("");
             ArrayList<String> listData = new ArrayList<>();
             while(cursor.moveToNext()){
                 listData.add(cursor.getString(1));
@@ -166,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String selectedSymptom = (String) textView.getText();
-                    // removingPosition=position;
                     long rs= myDatabase.deleteData(selectedSymptom);
 
                     if(rs>0)

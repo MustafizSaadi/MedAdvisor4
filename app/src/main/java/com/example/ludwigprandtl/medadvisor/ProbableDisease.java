@@ -1,10 +1,13 @@
 package com.example.ludwigprandtl.medadvisor;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -95,5 +98,15 @@ public class ProbableDisease extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this,R.layout.disease_list,R.id.textViewId,str);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String value = adapter.getItem(position);
+                Intent intent = new Intent(ProbableDisease.this,DiseaseDetails.class);
+                intent.putExtra("Data",value);
+                startActivity(intent);
+            }
+        });
     }
 }

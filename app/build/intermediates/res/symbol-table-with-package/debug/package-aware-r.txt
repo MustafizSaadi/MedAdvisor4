@@ -689,6 +689,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
 id CTRL
+id DiseaseName
 id FUNCTION
 id META
 id ProbableDieases
@@ -782,11 +783,13 @@ id line3
 id listMode
 id list_item
 id media_actions
+id medicinal_treatment
 id message
 id middle
 id multiply
 id myTextView
 id never
+id non_medicinal_treatment
 id none
 id normal
 id notification_background
@@ -797,9 +800,11 @@ id parent
 id parentPanel
 id parent_temp_text
 id percent
+id preventions
 id progress_circular
 id progress_horizontal
 id radio
+id reasons
 id right
 id right_icon
 id right_side
@@ -836,6 +841,7 @@ id start
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id symptoms
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
