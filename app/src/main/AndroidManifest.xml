@@ -13,7 +13,8 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".MainActivity"
-            android:label="Symptoms">
+            android:label="Symptoms"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,11 +22,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".DiseaseDetails"
-            android:label="Disease Details"/>
+            android:label="Disease Details"
+            android:screenOrientation="portrait"/>
         <activity android:name=".SearchSymptoms"
-            android:label="Search Symptoms"/>
+            android:label="Search Symptoms"
+            android:screenOrientation="portrait"/>
         <activity android:name=".ProbableDisease"
-            android:label="Probable Diseases"></activity>
+            android:label="Probable Diseases"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

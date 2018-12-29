@@ -26,7 +26,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.ludwigprandtl.medadvisor.MainActivity"
-            android:label="Symptoms" >
+            android:label="Symptoms"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,13 +36,16 @@
         </activity>
         <activity
             android:name="com.example.ludwigprandtl.medadvisor.DiseaseDetails"
-            android:label="Disease Details" />
+            android:label="Disease Details"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.ludwigprandtl.medadvisor.SearchSymptoms"
-            android:label="Search Symptoms" />
+            android:label="Search Symptoms"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.ludwigprandtl.medadvisor.ProbableDisease"
-            android:label="Probable Diseases" />
+            android:label="Probable Diseases"
+            android:screenOrientation="portrait" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
