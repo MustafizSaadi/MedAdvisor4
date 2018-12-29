@@ -20,9 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DiseaseDetails" />
-        <activity android:name=".SearchSymptoms" />
-        <activity android:name=".ProbableDisease"></activity>
+        <activity android:name=".DiseaseDetails"
+            android:label="Disease Details"/>
+        <activity android:name=".SearchSymptoms"
+            android:label="Search Symptoms"/>
+        <activity android:name=".ProbableDisease"
+            android:label="Probable Diseases"></activity>
     </application>
 
 </manifest>

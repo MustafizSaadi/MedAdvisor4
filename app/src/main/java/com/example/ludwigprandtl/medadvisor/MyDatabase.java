@@ -13,7 +13,7 @@ public class MyDatabase extends SQLiteOpenHelper implements Serializable {
     private static final String Database_Name = "Selected_Symptoms_list.db";
     private static final String Table_Name = "Symptoms";
     private static final int Version_Number=1;
-    private static final String ID="_id";
+    //private static final String ID="_id";
     private static final String symptom = "Selected_Symptoms";
     private Context context;
     public MyDatabase(Context context) {
@@ -54,7 +54,7 @@ public class MyDatabase extends SQLiteOpenHelper implements Serializable {
     public Cursor readData()
     {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("Select * from Symptoms;",null);
+        Cursor cursor = sqLiteDatabase.rawQuery("Select distinct Selected_Symptoms from Symptoms;",null);
         return cursor;
     }
 

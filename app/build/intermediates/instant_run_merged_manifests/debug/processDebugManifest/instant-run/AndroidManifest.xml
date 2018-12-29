@@ -33,9 +33,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.ludwigprandtl.medadvisor.DiseaseDetails" />
-        <activity android:name="com.example.ludwigprandtl.medadvisor.SearchSymptoms" />
-        <activity android:name="com.example.ludwigprandtl.medadvisor.ProbableDisease" />
+        <activity
+            android:name="com.example.ludwigprandtl.medadvisor.DiseaseDetails"
+            android:label="Disease Details" />
+        <activity
+            android:name="com.example.ludwigprandtl.medadvisor.SearchSymptoms"
+            android:label="Search Symptoms" />
+        <activity
+            android:name="com.example.ludwigprandtl.medadvisor.ProbableDisease"
+            android:label="Probable Diseases" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

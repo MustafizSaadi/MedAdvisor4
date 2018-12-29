@@ -33,10 +33,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myDatabase = new MyDatabase(this);
+       // myDatabase.clearData();
         SQLiteDatabase sqLiteDatabase = myDatabase.getWritableDatabase();
+        Toast.makeText(this, "I am in onCreate", Toast.LENGTH_SHORT).show();
     }
     protected void onStart() {
 
+        Toast.makeText(this, "I am in onStart", Toast.LENGTH_SHORT).show();
         super.onStart();
         button = findViewById(R.id.add_symptom);
         button.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,SearchSymptoms.class);
                 startActivity(intent);
-                finish();
+              //  finish();
             }
         });
         listView = findViewById(R.id.myTextView) ;
@@ -54,20 +57,20 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null){
             String Symptom = bundle.getString("Database");
-            long rowId = myDatabase.insertData(Symptom);
-            if(rowId>0)
+                long rowId = myDatabase.insertData(Symptom);
+          /*  if(rowId>0)
                 Toast.makeText(MainActivity.this,"New row inserted",Toast.LENGTH_SHORT).show();
             else
-                Toast.makeText(MainActivity.this,"Unsuccessful",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"Unsuccessful",Toast.LENGTH_SHORT).show();*/
 
-            send = findViewById(R.id.send);
+                send = findViewById(R.id.send);
 
-            goToDisease();
-            showSelectedSymptoms();
+                goToDisease();
+                showSelectedSymptoms();
+            }
             // deleteSelectedSymptoms();
 
         }
-    }
 
     @SuppressLint("ClickableViewAccessibility")
     private void goToDisease() {
@@ -88,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         if(cursor.getCount()==0)
         {
             ArrayList<String> listData = new ArrayList<>();
+            button.setText("Add Symptom");
             CustomAdapter custom = new CustomAdapter(this,listData,listData.size());
             listView.setAdapter(custom);
             custom.notifyDataSetChanged();
@@ -97,8 +101,9 @@ public class MainActivity extends AppCompatActivity {
         {
 
             ArrayList<String> listData = new ArrayList<>();
+            button.setText("Add More Symptoms");
             while(cursor.moveToNext()){
-                listData.add(cursor.getString(1));
+                listData.add(cursor.getString(0));
                 //Toast.makeText(EnterSymptoms.this,cursor.getString(1),Toast.LENGTH_LONG).show();
             }
             Toast.makeText(MainActivity.this,""+listData.size(),Toast.LENGTH_SHORT).show();
@@ -129,8 +134,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public Object getItem(int position) {
-            return null;
+        public String getItem(int position) {
+            return symptoms_list.get(position);
         }
 
         @Override
@@ -158,13 +163,14 @@ public class MainActivity extends AppCompatActivity {
             discardButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String selectedSymptom = (String) textView.getText();
+                    String selectedSymptom = getItem(position);
+                    Toast.makeText(context,""+selectedSymptom,Toast.LENGTH_SHORT).show();
                     long rs= myDatabase.deleteData(selectedSymptom);
 
-                    if(rs>0)
+                   /* if(rs>0)
                         Toast.makeText(context,"Successfully deleted"+selectedSymptom,Toast.LENGTH_SHORT).show();
                     else
-                        Toast.makeText(context,"Unsuccessful",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Unsuccessful",Toast.LENGTH_SHORT).show();*/
                     showSelectedSymptoms();
                 }
             });

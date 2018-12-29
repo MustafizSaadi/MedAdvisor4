@@ -42,6 +42,9 @@ public class SearchSymptoms extends AppCompatActivity {
         listview = findViewById(R.id.SymptomsId);
         searchView = findViewById(R.id.search_symptom);
     }
+
+    @Override
+
     public void onStart() {
 
         super.onStart();
@@ -111,7 +114,7 @@ public class SearchSymptoms extends AppCompatActivity {
 
                                 }
                                 question = (String) childSnapShot.child("question").getValue(String.class);
-                                Toast.makeText(SearchSymptoms.this, "matched",Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(SearchSymptoms.this, "matched",Toast.LENGTH_SHORT).show();
                                 fever_builder.setTitle(question);
                                 arr = new String[fever_clarity.size()];
                                 arr = fever_clarity.toArray(arr);
@@ -119,18 +122,18 @@ public class SearchSymptoms extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         extra[0] = arr[which];
-                                        Toast.makeText(SearchSymptoms.this, value[0]+extra[0],Toast.LENGTH_SHORT).show();
+                                       // Toast.makeText(SearchSymptoms.this, value[0]+extra[0],Toast.LENGTH_SHORT).show();
                                     }
                                 });
                                 fever_builder.setPositiveButton("ADD", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         value[0] +="(" + extra[0] + ")";
-                                        Toast.makeText(SearchSymptoms.this, value[0],Toast.LENGTH_SHORT).show();
-                                        finish();
+                                      //  Toast.makeText(SearchSymptoms.this, value[0],Toast.LENGTH_SHORT).show();
+                                       // finish();
                                         Intent intent = new Intent(SearchSymptoms.this,MainActivity.class);
                                         intent.putExtra("Database",value[0]);
-                                        startActivity(intent);
+                                        startActivity(intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP));
                                         finish();
                                     }
                                 });
@@ -142,7 +145,7 @@ public class SearchSymptoms extends AppCompatActivity {
                         if(!activity_flag) {
                             Intent intent = new Intent(SearchSymptoms.this, MainActivity.class);
                             intent.putExtra("Database", value[0]);
-                            startActivity(intent);
+                            startActivity(intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP));
                             finish();
                         }
                     }

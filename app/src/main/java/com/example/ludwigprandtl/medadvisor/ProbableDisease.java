@@ -47,9 +47,10 @@ public class ProbableDisease extends AppCompatActivity {
     }
     public void onStart(){
         super.onStart();
+        pq.clear();
         Cursor cursor = myDatabase.readData();
         while(cursor.moveToNext()){
-            list.add(cursor.getString(1)) ;
+            list.add(cursor.getString(0)) ;
         }
            rootRef = FirebaseDatabase.getInstance().getReference();
           databaseReference = rootRef.child("disease");

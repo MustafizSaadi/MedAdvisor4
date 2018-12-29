@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ProbableDisease"
     android:orientation="vertical"
-    android:background="@color/White">
+    android:background="@color/White"
+    android:textColor="@color/Black">
 
     <ListView
         android:id="@+id/ProbableDieases"
