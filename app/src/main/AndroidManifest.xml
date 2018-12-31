@@ -15,21 +15,26 @@
             android:name=".MainActivity"
             android:label="Symptoms"
             android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".DiseaseDetails"
+            android:label="Disease Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchSymptoms"
+            android:label="Search Symptoms"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProbableDisease"
+            android:label="Probable Diseases"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DiseaseDetails"
-            android:label="Disease Details"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SearchSymptoms"
-            android:label="Search Symptoms"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ProbableDisease"
-            android:label="Probable Diseases"
-            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

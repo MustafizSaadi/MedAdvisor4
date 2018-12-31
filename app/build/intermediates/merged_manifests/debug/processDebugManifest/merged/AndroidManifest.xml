@@ -28,11 +28,6 @@
             android:name="com.example.ludwigprandtl.medadvisor.MainActivity"
             android:label="Symptoms"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.ludwigprandtl.medadvisor.DiseaseDetails"
@@ -46,6 +41,13 @@
             android:name="com.example.ludwigprandtl.medadvisor.ProbableDisease"
             android:label="Probable Diseases"
             android:screenOrientation="portrait" />
+        <activity android:name="com.example.ludwigprandtl.medadvisor.Home" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

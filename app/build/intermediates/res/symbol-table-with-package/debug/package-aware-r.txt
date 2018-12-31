@@ -668,12 +668,15 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable drugs_and_medication1
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_close_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_send_black_24dp
+drawable med_advisor1
+drawable medication_reminder1
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -686,6 +689,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable symptom_checker1
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -753,6 +757,7 @@ id direct
 id disableHome
 id discardButton
 id diseases_list_id
+id drugs_medication
 id edit_query
 id empty
 id empty_id
@@ -784,6 +789,7 @@ id line3
 id listMode
 id list_item
 id media_actions
+id medication_reminder
 id medicinal_treatment
 id message
 id middle
@@ -842,6 +848,7 @@ id start
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id symptom_checker
 id symptoms
 id tabMode
 id tag_transition_group
@@ -900,6 +907,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_disease_details
+layout activity_home
 layout activity_main
 layout activity_probable_disease
 layout activity_search_symptoms
@@ -927,6 +935,7 @@ layout support_simple_spinner_dropdown_item
 layout temp_text
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap med_advisor1
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
