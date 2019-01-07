@@ -14,8 +14,7 @@
         <activity
             android:name=".MainActivity"
             android:label="Symptoms"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".DiseaseDetails"
             android:label="Disease Details"
@@ -35,6 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DrugInfoComm"></activity>
     </application>
 
 </manifest>

@@ -671,10 +671,13 @@ drawable common_google_signin_btn_text_light_normal_background
 drawable drugs_and_medication1
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_access_time_black_24dp
+drawable ic_chevron_right_black_24dp
 drawable ic_close_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_send_black_24dp
+drawable ic_star_black_24dp
 drawable med_advisor1
 drawable medication_reminder1
 drawable notification_action_background
@@ -722,6 +725,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addReminder
 id add_symptom
 id adjust_height
 id adjust_width
@@ -747,6 +751,7 @@ id clip_vertical
 id collapseActionView
 id content
 id contentPanel
+id contra_indications
 id custom
 id customPanel
 id dark
@@ -757,6 +762,7 @@ id direct
 id disableHome
 id discardButton
 id diseases_list_id
+id dosage_info
 id drugs_medication
 id edit_query
 id empty
@@ -779,6 +785,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id indications
 id info
 id invisible
 id italic
@@ -788,6 +795,7 @@ id line1
 id line3
 id listMode
 id list_item
+id market_price
 id media_actions
 id medication_reminder
 id medicinal_treatment
@@ -807,6 +815,7 @@ id parent
 id parentPanel
 id parent_temp_text
 id percent
+id precautions
 id preventions
 id progress_circular
 id progress_horizontal
@@ -836,6 +845,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id side_effects
 id spacer
 id split_action_bar
 id spread
@@ -844,6 +854,7 @@ id src_atop
 id src_in
 id src_over
 id standard
+id starButton
 id start
 id status_bar_latest_event_content
 id submenuarrow
@@ -907,6 +918,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_disease_details
+layout activity_drug_info_comm
 layout activity_home
 layout activity_main
 layout activity_probable_disease
@@ -933,6 +945,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout temp_text
+menu save_medicine
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap med_advisor1
