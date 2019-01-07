@@ -46,7 +46,9 @@ public class Home extends AppCompatActivity {
         DrugMedication.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Home.this,DrugInfoComm.class);
+                intent.putExtra("Data","Ace Tab.");
+                startActivity(intent);
             }
         });
 

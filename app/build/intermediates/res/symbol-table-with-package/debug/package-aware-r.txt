@@ -763,6 +763,7 @@ id disableHome
 id discardButton
 id diseases_list_id
 id dosage_info
+id drug
 id drugs_medication
 id edit_query
 id empty

@@ -13,6 +13,7 @@
         android:orientation="vertical"
         >
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -22,7 +23,6 @@
                 android:id="@+id/drug"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_gravity="center"
                 android:text="hello"
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp" />
@@ -30,37 +30,40 @@
             <TextView
                 android:id="@+id/info"
                 android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                android:layout_height="150dp"
+                android:textColor="@color/Black"
+                android:textSize="20sp"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:background="@color/Shadow"
             android:orientation="horizontal"
             android:weightSum="3">
 
             <TextView
                 android:layout_width="100dp"
-                android:layout_height="40dp"
+                android:layout_height="60dp"
                 android:layout_weight="2"
                 android:drawableRight="@drawable/ic_access_time_black_24dp"
                 android:text="Taking this medicine?"
                 android:gravity="left|center_vertical"
-                android:textSize="20sp" />
+                android:textSize="17sp" />
 
-            <android.support.v7.widget.AppCompatButton
+            <Button
                 android:id="@+id/addReminder"
                 android:layout_width="90dp"
-                android:layout_height="40dp"
+                android:layout_height="60dp"
                 android:layout_weight="1"
                 android:background="@color/Shadow"
                 android:text="Add this to reminder"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/Black"
                 android:textSize="15sp"
                 android:gravity="left|center_vertical"
-                android:layout_marginLeft="5dp"/>
+                android:layout_marginLeft="5dp"
+                android:textAllCaps="false" />
         </LinearLayout>
 
         <Button
@@ -71,7 +74,9 @@
             android:background="@color/White"
             android:drawableRight="@drawable/ic_chevron_right_black_24dp"
             android:text="Indications"
-            android:gravity="left|center_vertical"/>
+            android:gravity="left|center_vertical"
+            android:textSize="20sp"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/contra-indications"
@@ -81,7 +86,9 @@
             android:layout_marginRight="5dp"
             android:background="@color/White"
             android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-            android:text="Contra-Indications" />
+            android:text="Contra-Indications"
+            android:textSize="20sp"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/side_effects"
@@ -91,7 +98,9 @@
             android:layout_marginRight="5dp"
             android:background="@color/White"
             android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-            android:text="Side Effects" />
+            android:text="Side Effects"
+            android:textSize="20sp"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/precautions"
@@ -101,7 +110,9 @@
             android:layout_marginRight="5dp"
             android:background="@color/White"
             android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-            android:text="Precautions" />
+            android:text="Precautions"
+            android:textSize="20sp"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/dosage_info"
@@ -111,7 +122,9 @@
             android:layout_marginRight="5dp"
             android:background="@color/White"
             android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-            android:text="Dosage Info" />
+            android:text="Dosage Info"
+            android:textSize="20sp"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/market_price"
@@ -121,7 +134,9 @@
             android:layout_marginRight="5dp"
             android:background="@color/White"
             android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-            android:text="Market Price" />
+            android:text="Market Price"
+            android:textSize="20sp"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 

@@ -27,14 +27,17 @@
             android:name=".ProbableDisease"
             android:label="Probable Diseases"
             android:screenOrientation="portrait" />
-        <activity android:name=".Home">
+        <activity android:name=".Home"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DrugInfoComm"></activity>
+        <activity android:name=".DrugInfoComm"
+            android:label="Drug Info"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
