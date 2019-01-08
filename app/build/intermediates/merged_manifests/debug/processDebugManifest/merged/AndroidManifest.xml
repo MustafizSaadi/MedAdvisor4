@@ -53,6 +53,7 @@
             android:name="com.example.ludwigprandtl.medadvisor.DrugInfoComm"
             android:label="Drug Info"
             android:screenOrientation="portrait" />
+        <activity android:name="com.example.ludwigprandtl.medadvisor.DrugInfoGen" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

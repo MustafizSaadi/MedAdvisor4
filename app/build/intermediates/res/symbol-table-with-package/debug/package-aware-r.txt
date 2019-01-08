@@ -726,6 +726,7 @@ id actions
 id activity_chooser_view_content
 id add
 id addReminder
+id addReminderGen
 id add_symptom
 id adjust_height
 id adjust_width
@@ -752,6 +753,7 @@ id collapseActionView
 id content
 id contentPanel
 id contra_indications
+id contra_indicationsGen
 id custom
 id customPanel
 id dark
@@ -763,7 +765,9 @@ id disableHome
 id discardButton
 id diseases_list_id
 id dosage_info
+id dosage_infoGen
 id drug
+id drug_gen
 id drugs_medication
 id edit_query
 id empty
@@ -787,7 +791,9 @@ id icon_only
 id ifRoom
 id image
 id indications
+id indicationsGen
 id info
+id info_gen
 id invisible
 id italic
 id left
@@ -817,6 +823,7 @@ id parentPanel
 id parent_temp_text
 id percent
 id precautions
+id precautionsGen
 id preventions
 id progress_circular
 id progress_horizontal
@@ -847,6 +854,7 @@ id showCustom
 id showHome
 id showTitle
 id side_effects
+id side_effectsGen
 id spacer
 id split_action_bar
 id spread
@@ -920,6 +928,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_disease_details
 layout activity_drug_info_comm
+layout activity_drug_info_gen
 layout activity_home
 layout activity_main
 layout activity_probable_disease
