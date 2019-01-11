@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null){
             String Symptom = bundle.getString("Database");
-                long rowId = myDatabase.insertData(Symptom);
+                long rowId = myDatabase.insertData(Symptom,"Symptoms");
           /*  if(rowId>0)
                 Toast.makeText(MainActivity.this,"New row inserted",Toast.LENGTH_SHORT).show();
             else
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cursor cursor = myDatabase.readData();
+                Cursor cursor = myDatabase.readData("Symptoms");
                 if(cursor.getCount()!=0) {
                     Intent intent = new Intent(MainActivity.this, ProbableDisease.class);
                     startActivity(intent);
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showSelectedSymptoms() {
-        Cursor cursor = myDatabase.readData();
+        Cursor cursor = myDatabase.readData("Symptoms");
         if(cursor.getCount()==0)
         {
             ArrayList<String> listData = new ArrayList<>();
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     String selectedSymptom = getItem(position);
                     Toast.makeText(context,""+selectedSymptom,Toast.LENGTH_SHORT).show();
-                    long rs= myDatabase.deleteData(selectedSymptom);
+                    long rs= myDatabase.deleteData(selectedSymptom,"Symptoms");
 
                    /* if(rs>0)
                         Toast.makeText(context,"Successfully deleted"+selectedSymptom,Toast.LENGTH_SHORT).show();

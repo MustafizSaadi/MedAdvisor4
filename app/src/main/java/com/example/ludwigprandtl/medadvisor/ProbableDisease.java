@@ -48,7 +48,7 @@ public class ProbableDisease extends AppCompatActivity {
     public void onStart(){
         super.onStart();
         pq.clear();
-        Cursor cursor = myDatabase.readData();
+        Cursor cursor = myDatabase.readData("Symptoms");
         while(cursor.moveToNext()){
             list.add(cursor.getString(0)) ;
         }

@@ -30,18 +30,24 @@
         <activity
             android:name=".Home"
             android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".DrugInfoComm"
+            android:label="Drug Info"
+            android:screenOrientation="portrait" />
+        <activity android:name=".DrugInfoGen"
+            android:label="Drug Info"
+            android:screenOrientation="portrait" />
+        <activity android:name=".DrugDetails" />
+        <activity android:name=".DrugList"
+            android:label="Drugs and Medication "
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DrugInfoComm"
-            android:label="Drug Info"
-            android:screenOrientation="portrait" />
-        <activity android:name=".DrugInfoGen" />
-        <activity android:name=".DrugDetails"></activity>
     </application>
 
 </manifest>

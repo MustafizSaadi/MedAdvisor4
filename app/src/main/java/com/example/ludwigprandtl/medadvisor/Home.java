@@ -30,7 +30,7 @@ public class Home extends AppCompatActivity {
         SymptomChecker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myDatabase.clearData();
+                myDatabase.clearData("Symptoms");
                 Intent intent = new Intent(Home.this,MainActivity.class);
                 startActivity(intent);
             }
@@ -46,8 +46,8 @@ public class Home extends AppCompatActivity {
         DrugMedication.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,DrugInfoGen.class);
-                intent.putExtra("Data","Paracetamol");
+                Intent intent = new Intent(Home.this,DrugInfoComm.class);
+                intent.putExtra("Data","Ace Tab.");
                 startActivity(intent);
             }
         });

@@ -12,7 +12,8 @@ import java.io.Serializable;
 public class MyDatabase extends SQLiteOpenHelper implements Serializable {
     private static final String Database_Name = "Selected_Symptoms_list.db";
     private static final String Table_Name = "Symptoms";
-    private static final int Version_Number=1;
+    private static final String Table_Name2 = "Drugs";
+    private static final int Version_Number=2;
     //private static final String ID="_id";
     private static final String symptom = "Selected_Symptoms";
     private Context context;
@@ -37,6 +38,9 @@ public class MyDatabase extends SQLiteOpenHelper implements Serializable {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         try {
+            if(oldVersion<newVersion){
+                db.execSQL("create table Drugs (_id integer primary key AUTOINCREMENT, MyDrugs varchar(20));");
+            }
 
         }
         catch(Exception e){
@@ -44,28 +48,52 @@ public class MyDatabase extends SQLiteOpenHelper implements Serializable {
         }
     }
 
-    public long insertData(String s) {
+    public long insertData(String s,String table) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(symptom, s);
-        long rowId = sqLiteDatabase.insert(Table_Name, null, contentValues);
-        return rowId;
+
+        if(table.equals(Table_Name)) {
+            contentValues.put(symptom, s);
+            long rowId = sqLiteDatabase.insert(Table_Name, null, contentValues);
+            return rowId;
+        }
+        else
+        {
+            contentValues.put(Table_Name2, s);
+            long rowId = sqLiteDatabase.insert(Table_Name2, null, contentValues);
+            return rowId;
+        }
     }
-    public Cursor readData()
+    public Cursor readData(String table)
     {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("Select distinct Selected_Symptoms from Symptoms;",null);
+        Cursor cursor;
+        if(table.equals(Table_Name))
+        cursor = sqLiteDatabase.rawQuery("Select distinct Selected_Symptoms from Symptoms;",null);
+        else
+            cursor = sqLiteDatabase.rawQuery("Select distinct Selected_Symptoms from Drugs;",null);
         return cursor;
     }
 
-    public void clearData() {
+    public void clearData(String table) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        if(table.equals(Table_Name))
         sqLiteDatabase.delete(Table_Name,null,null);
+        else
+            sqLiteDatabase.delete(Table_Name2,null,null);
     }
 
-    public long deleteData(String selectedSymptom) {
+    public long deleteData(String data,String table) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        long row_id=sqLiteDatabase.delete(Table_Name,symptom+"=?", new String[]{selectedSymptom});
-        return  row_id;
+        if(table.equals(Table_Name)) {
+            long row_id = sqLiteDatabase.delete(Table_Name, symptom + "=?", new String[]{data});
+            return  row_id;
+        }
+        else
+        {
+            long row_id = sqLiteDatabase.delete(Table_Name2, symptom + "=?", new String[]{data});
+            return  row_id;
+        }
+
     }
 }
