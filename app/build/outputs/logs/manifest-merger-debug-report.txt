@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-47:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Ludwig Prandtl\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\1a8843fd3a851e786900c310f93e6ee8\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Ludwig Prandtl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\fec1e3f90e3265d5d0012b549c56f0c3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-database:16.0.5] C:\Users\Ludwig Prandtl\.gradle\caches\transforms-1\files-1.1\firebase-database-16.0.5.aar\427cd250d4f9ccd83e7fb1473bf4ac14\AndroidManifest.xml:15:1-25:12
@@ -50,27 +50,27 @@ MERGED from [com.android.support:print:28.0.0] C:\Users\Ludwig Prandtl\.gradle\c
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Ludwig Prandtl\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\5eb836c2f035cf5b3ff638d9f5514f6f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Ludwig Prandtl\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\bc4bb52c121e0ea660ff4f42ea405099\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\Ludwig Prandtl\.gradle\caches\transforms-1\files-1.1\firebase-database-collection-16.0.1.aar\dcd10a8f4a50868399109de8318e93c8\AndroidManifest.xml:2:1-7:12
-INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-47:12
 	package
 		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:4:5-51
 		INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:6:5-44:19
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:6:5-45:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Ludwig Prandtl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\fec1e3f90e3265d5d0012b549c56f0c3\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Ludwig Prandtl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\fec1e3f90e3265d5d0012b549c56f0c3\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\Ludwig Prandtl\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.6.aar\39701ce5099ca66b591ee602b4d0845f\AndroidManifest.xml:7:5-20
@@ -184,9 +184,13 @@ ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\A
 	android:name
 		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:40:13-41
 activity#com.example.ludwigprandtl.medadvisor.DrugInfoGen
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:43:9-58
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:43:9-49
 	android:name
 		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:43:19-46
+activity#com.example.ludwigprandtl.medadvisor.DrugDetails
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:44:9-58
+	android:name
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:44:19-46
 uses-sdk
 INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml

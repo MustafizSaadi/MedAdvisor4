@@ -1,10 +1,12 @@
 package com.example.ludwigprandtl.medadvisor;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -17,11 +19,11 @@ import com.google.firebase.database.ValueEventListener;
 public class DrugInfoGen extends AppCompatActivity {
 
     TextView drugGen,infoGen;
-    Button reminderGen,indicationGen,contraIndicationGen,sideEffectsGen,precautionGen,dosageInfoGen;
+    Button reminderGen,indicationGen,contraIndicationGen,sideEffectsGen,precautionGen;
     DatabaseReference rootRef;
     DatabaseReference databaseReference;
     boolean flag;
-    String data ;
+    String data,medicine ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,19 +37,63 @@ public class DrugInfoGen extends AppCompatActivity {
         contraIndicationGen = findViewById(R.id.contra_indicationsGen);
         sideEffectsGen = findViewById(R.id.side_effectsGen);
         precautionGen = findViewById(R.id.precautionsGen);
-        dosageInfoGen = findViewById(R.id.dosage_infoGen);
 
         rootRef = FirebaseDatabase.getInstance().getReference();
         databaseReference = rootRef.child("Drugs").child("GenericName");
         data = "";
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null){
-            String medicine = bundle.getString("Data");
-            fetchData(medicine);
+            medicine = bundle.getString("Data");
+            fetchData();
         }
     }
 
-    private void fetchData(final String medicine) {
+    @Override
+    protected void onStart() {
+        super.onStart();
+        indicationGen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoGen.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",indicationGen.getText());
+                intent.putExtra("Activity","Generic");
+                startActivity(intent);
+            }
+        });
+        contraIndicationGen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoGen.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",contraIndicationGen.getText());
+                intent.putExtra("Activity","Generic");
+                startActivity(intent);
+            }
+        });
+        precautionGen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoGen.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",precautionGen.getText());
+                intent.putExtra("Activity","Generic");
+                startActivity(intent);
+            }
+        });
+        sideEffectsGen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoGen.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",sideEffectsGen.getText());
+                intent.putExtra("Activity","Generic");
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void fetchData() {
         drugGen.setText(medicine);
         flag = false;
         databaseReference.addValueEventListener(new ValueEventListener() {

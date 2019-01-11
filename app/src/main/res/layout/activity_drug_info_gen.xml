@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DrugInfoGen">
+    tools:context=".DrugInfoGen"
+    android:background="@color/White">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -111,18 +112,6 @@
             android:background="@color/White"
             android:drawableRight="@drawable/ic_chevron_right_black_24dp"
             android:text="Precautions"
-            android:textSize="20sp"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/dosage_infoGen"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="left|center_vertical"
-            android:layout_marginRight="5dp"
-            android:background="@color/White"
-            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-            android:text="Dosage Info"
             android:textSize="20sp"
             android:textAllCaps="false"/>
 

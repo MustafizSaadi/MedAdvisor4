@@ -765,8 +765,9 @@ id disableHome
 id discardButton
 id diseases_list_id
 id dosage_info
-id dosage_infoGen
 id drug
+id drug_detail_name
+id drug_details
 id drug_gen
 id drugs_medication
 id edit_query
@@ -927,6 +928,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_disease_details
+layout activity_drug_details
 layout activity_drug_info_comm
 layout activity_drug_info_gen
 layout activity_home

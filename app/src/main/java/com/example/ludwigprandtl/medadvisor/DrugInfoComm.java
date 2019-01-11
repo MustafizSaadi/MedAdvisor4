@@ -1,11 +1,13 @@
 package com.example.ludwigprandtl.medadvisor;
 
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -21,7 +23,7 @@ public class DrugInfoComm extends AppCompatActivity {
     DatabaseReference rootRef;
     DatabaseReference databaseReference;
     boolean flag;
-    String data ;
+    String data,medicine ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +44,78 @@ public class DrugInfoComm extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null){
-            String medicine = bundle.getString("Data");
-            fetchData(medicine);
+            medicine = bundle.getString("Data");
+            fetchData();
         }
 
     }
 
-    private void fetchData(final String medicine) {
+    @Override
+    protected void onStart() {
+        super.onStart();
+        indication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoComm.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",indication.getText());
+                intent.putExtra("Activity","Commercial");
+                startActivity(intent);
+            }
+        });
+        contraIndication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoComm.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",contraIndication.getText());
+                intent.putExtra("Activity","Commercial");
+                startActivity(intent);
+            }
+        });
+        sideEffects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoComm.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",sideEffects.getText());
+                intent.putExtra("Activity","Commercial");
+                startActivity(intent);
+            }
+        });
+        precaution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoComm.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",precaution.getText());
+                intent.putExtra("Activity","Commercial");
+                startActivity(intent);
+            }
+        });
+        dosageInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoComm.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",dosageInfo.getText());
+                intent.putExtra("Activity","Commercial");
+                startActivity(intent);
+            }
+        });
+        marketPrice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoComm.this,DrugDetails.class);
+                intent.putExtra("Title",medicine);
+                intent.putExtra("Headline",marketPrice.getText());
+                intent.putExtra("Activity","Commercial");
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void fetchData() {
         drug.setText(medicine);
         flag = false;
        databaseReference.addValueEventListener(new ValueEventListener() {
@@ -86,4 +153,6 @@ public class DrugInfoComm extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.save_medicine,menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+
 }
