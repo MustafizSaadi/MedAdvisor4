@@ -18,7 +18,7 @@ public class DrugRecyclerView extends RecyclerView.Adapter <DrugRecyclerView.Dru
     ArrayList<String> list;
     ArrayList<String> listFull;
 
-    DrugRecyclerView(ArrayList<String> list){
+    void setList(ArrayList<String> list){
         this.list = list;
         listFull = new ArrayList<>(list);
     }
