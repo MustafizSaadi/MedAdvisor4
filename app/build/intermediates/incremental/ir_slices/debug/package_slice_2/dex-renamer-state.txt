@@ -1,4 +1,4 @@
-#Sat Jan 12 01:21:55 BDT 2019
+#Sat Jan 12 13:11:29 BDT 2019
 base.0=D\:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 path.0=classes.dex
 renamed.0=classes.dex

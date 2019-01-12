@@ -5,16 +5,22 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
-public class DrugRecyclerView extends RecyclerView.Adapter <DrugRecyclerView.DrugsViewHolder>{
+public class DrugRecyclerView extends RecyclerView.Adapter <DrugRecyclerView.DrugsViewHolder> implements Filterable {
 
     ArrayList<String> list;
+    ArrayList<String> listFull;
 
     DrugRecyclerView(ArrayList<String> list){
         this.list = list;
+        listFull = new ArrayList<>(list);
     }
 
     @NonNull
@@ -36,6 +42,42 @@ public class DrugRecyclerView extends RecyclerView.Adapter <DrugRecyclerView.Dru
     public int getItemCount() {
         return list.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return exampleFilter;
+    }
+    private Filter exampleFilter = new Filter(){
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            ArrayList<String> filteredList = new ArrayList<>();
+            if(constraint == null || constraint.length()==0){
+                filteredList.addAll(listFull);
+            }
+            else{
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for(int i=0;i<listFull.size();i++){
+                    String temp = listFull.get(i);
+                    if(temp.toLowerCase().trim().equals(filterPattern)){
+                        filteredList.add(temp);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return  results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+                list.clear();
+                list.addAll((Collection<? extends String>) results.values);
+                notifyDataSetChanged();
+        }
+    };
 
     public class DrugsViewHolder extends RecyclerView.ViewHolder{
         TextView textView;

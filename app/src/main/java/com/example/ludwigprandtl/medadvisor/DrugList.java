@@ -4,6 +4,7 @@ import android.renderscript.Sampler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -23,6 +24,7 @@ public class DrugList extends AppCompatActivity {
 
     Button AZlist,myDrug,CommercialName,GenericName;
     RecyclerView recyclerView;
+    DrugRecyclerView cAdapter;
     ArrayList<String> DruglistComm = new ArrayList<>();
     ArrayList<String> DruglistGen = new ArrayList<>();
     ArrayList<String> MyDruglist = new ArrayList<>();
@@ -44,7 +46,9 @@ public class DrugList extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String s) {
-                return false;
+
+                cAdapter.getFilter().filter(s);
+                return  false;
             }
         });
 
@@ -60,6 +64,7 @@ public class DrugList extends AppCompatActivity {
         CommercialName = findViewById(R.id.Commercial_Name);
         GenericName = findViewById(R.id.Generic_Name);
         recyclerView = findViewById(R.id.drugs_list);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         AZlist.setBackgroundColor(getResources().getColor(com.example.ludwigprandtl.medadvisor.R.color.colorPrimary));
@@ -68,6 +73,8 @@ public class DrugList extends AppCompatActivity {
         cn=true;
         rootRef = FirebaseDatabase.getInstance().getReference();
         databaseReference = rootRef.child("Drugs").child("CommercialName");
+        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(itemDecoration);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -75,7 +82,8 @@ public class DrugList extends AppCompatActivity {
                 for(DataSnapshot childSnapShot : dataSnapshot.getChildren()){
                     DruglistComm.add(childSnapShot.child("Name").getValue(String.class));
                 }
-                recyclerView.setAdapter(new DrugRecyclerView(DruglistComm));
+                cAdapter = new DrugRecyclerView(DruglistComm);
+                recyclerView.setAdapter(cAdapter);
                // Toast.makeText(DrugList.this,"Adapter set",Toast.LENGTH_SHORT).show();
 
             }
@@ -85,7 +93,7 @@ public class DrugList extends AppCompatActivity {
 
             }
         });
-     /*   databaseReference = rootRef.child("Drugs").child("GenericName");
+        databaseReference = rootRef.child("Drugs").child("GenericName");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -98,7 +106,7 @@ public class DrugList extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });*/
+        });
     }
 
     @Override

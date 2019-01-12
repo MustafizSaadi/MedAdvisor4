@@ -161,49 +161,49 @@ ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\A
 	android:name
 		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:27:13-44
 activity#com.example.ludwigprandtl.medadvisor.Home
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:30:9-33:20
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:30:9-38:20
 	android:screenOrientation
 		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:32:13-49
 	android:name
 		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:31:13-33
-activity#com.example.ludwigprandtl.medadvisor.DrugInfoComm
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:34:9-37:52
-	android:screenOrientation
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:37:13-49
-	android:label
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:36:13-38
-	android:name
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:35:13-41
-activity#com.example.ludwigprandtl.medadvisor.DrugInfoGen
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:38:9-40:52
-	android:screenOrientation
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:40:13-49
-	android:label
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:39:13-38
-	android:name
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:38:19-46
-activity#com.example.ludwigprandtl.medadvisor.DrugDetails
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:41:9-49
-	android:name
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:41:19-46
-activity#com.example.ludwigprandtl.medadvisor.DrugList
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:42:9-50:20
-	android:screenOrientation
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:44:13-49
-	android:label
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:43:13-50
-	android:name
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:42:19-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:45:13-49:29
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:33:13-37:29
 action#android.intent.action.MAIN
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:46:17-69
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:46:25-66
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:48:17-77
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:36:17-77
 	android:name
-		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:48:27-74
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:36:27-74
+activity#com.example.ludwigprandtl.medadvisor.DrugInfoComm
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:39:9-42:52
+	android:screenOrientation
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:42:13-49
+	android:label
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:41:13-38
+	android:name
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:40:13-41
+activity#com.example.ludwigprandtl.medadvisor.DrugInfoGen
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:43:9-45:52
+	android:screenOrientation
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:45:13-49
+	android:label
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:44:13-38
+	android:name
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:43:19-46
+activity#com.example.ludwigprandtl.medadvisor.DrugDetails
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:46:9-49
+	android:name
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:46:19-46
+activity#com.example.ludwigprandtl.medadvisor.DrugList
+ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:47:9-50:20
+	android:screenOrientation
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:49:13-49
+	android:label
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:48:13-50
+	android:name
+		ADDED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml:47:19-43
 uses-sdk
 INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Saadi\2-2\AppDevelopment\MyCards-master\MedAdvisor4\app\src\main\AndroidManifest.xml
