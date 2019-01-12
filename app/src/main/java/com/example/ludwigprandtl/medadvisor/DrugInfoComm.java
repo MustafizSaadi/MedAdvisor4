@@ -1,8 +1,16 @@
 package com.example.ludwigprandtl.medadvisor;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,8 +30,11 @@ public class DrugInfoComm extends AppCompatActivity {
     Button reminder,indication,contraIndication,sideEffects,precaution,dosageInfo,marketPrice;
     DatabaseReference rootRef;
     DatabaseReference databaseReference;
-    boolean flag;
+    boolean flag,star;
     String data,medicine ;
+    MyDatabase myDatabase;
+    SQLiteDatabase sqLiteDatabase;
+    MenuItem starButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +51,16 @@ public class DrugInfoComm extends AppCompatActivity {
         marketPrice = findViewById(R.id.market_price);
         rootRef = FirebaseDatabase.getInstance().getReference();
         databaseReference = rootRef.child("Drugs").child("CommercialName");
+        myDatabase = new MyDatabase(this);
+        sqLiteDatabase = myDatabase.getWritableDatabase();
         data = "";
+        star = false;
 
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null){
             medicine = bundle.getString("Data");
             fetchData();
+
         }
 
     }
@@ -145,12 +160,58 @@ public class DrugInfoComm extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.starButton){
+            if(star){
+                starButton = item;
+                Drawable drawable = starButton.getIcon();
+
+                if (drawable != null) {
+                    drawable.mutate();
+                    drawable.setColorFilter(new
+                            PorterDuffColorFilter(Color.parseColor("white"), PorterDuff.Mode.MULTIPLY));
+                }
+                starButton.setIcon(drawable);
+
+                myDatabase.deleteData(medicine,"Drugs");
+                star = false;
+            }
+            else{
+                starButton = item;
+                Drawable drawable = starButton.getIcon();
+
+                if (drawable != null) {
+                    drawable.mutate();
+                    drawable.setColorFilter(new
+                            PorterDuffColorFilter(Color.parseColor("yellow"), PorterDuff.Mode.MULTIPLY));
+                }
+                starButton.setIcon(drawable);
+
+                long rowid = myDatabase.insertData(medicine,"Drugs");
+                star = true;
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.save_medicine,menu);
+        String columns[] = {"MyDrugs"};
+        Cursor cursor = sqLiteDatabase.query("Drugs",columns,"MyDrugs=?",new String[]{medicine},null,null,null);
+        if(cursor.getCount()==0) star = false;
+        else {
+            star=true;
+            starButton = menu.getItem(0);
+            Drawable drawable = starButton.getIcon();
+
+            if (drawable != null) {
+                drawable.mutate();
+                drawable.setColorFilter(new
+                        PorterDuffColorFilter(Color.parseColor("yellow"), PorterDuff.Mode.MULTIPLY));
+            }
+            starButton.setIcon(drawable);
+        }
+
         return super.onCreateOptionsMenu(menu);
     }
 

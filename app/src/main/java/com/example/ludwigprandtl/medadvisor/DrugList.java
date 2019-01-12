@@ -96,7 +96,7 @@ public class DrugList extends AppCompatActivity {
                     DruglistComm.add(childSnapShot.child("Name").getValue(String.class));
                 }
                 temp = DruglistComm;
-                cAdapter.setList(temp);
+                cAdapter.setList(temp,getString(R.string.comm),DrugList.this);
                 recyclerView.setAdapter(cAdapter);
                // Toast.makeText(DrugList.this,"Adapter set",Toast.LENGTH_SHORT).show();
 
@@ -126,7 +126,28 @@ public class DrugList extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        if(md){
+            if(cn){
+                Cursor cursor = myDatabase.readData("Drugs");
+                MyDruglistComm.clear();
+                while (cursor.moveToNext()) {
+                    MyDruglistComm.add(cursor.getString(0));
+                }
+                temp = MyDruglistComm;
+                cAdapter.setList(temp,getString(R.string.gen),DrugList.this);
+                recyclerView.setAdapter(cAdapter);
+            }
+            else if(gn){
+                Cursor cursor = myDatabase.readData("Gen");
+                MyDruglistGen.clear();
+                while (cursor.moveToNext()) {
+                    MyDruglistGen.add(cursor.getString(0));
+                }
+                temp = MyDruglistGen;
+                cAdapter.setList(temp,getString(R.string.gen),DrugList.this);
+                recyclerView.setAdapter(cAdapter);
+            }
+        }
         GenericName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,7 +157,7 @@ public class DrugList extends AppCompatActivity {
                     GenericName.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                     if (az) {
                         temp = DruglistGen;
-                        cAdapter.setList(temp);
+                        cAdapter.setList(temp,getString(R.string.gen),DrugList.this);
                         recyclerView.setAdapter(cAdapter);
                     } else if (md) {
                         Cursor cursor = myDatabase.readData("Gen");
@@ -145,7 +166,7 @@ public class DrugList extends AppCompatActivity {
                                 MyDruglistGen.add(cursor.getString(0));
                             }
                             temp = MyDruglistGen;
-                            cAdapter.setList(temp);
+                            cAdapter.setList(temp,getString(R.string.gen),DrugList.this);
                             recyclerView.setAdapter(cAdapter);
 
                     }
@@ -165,7 +186,7 @@ public class DrugList extends AppCompatActivity {
                     CommercialName.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                     if (az) {
                         temp = DruglistComm;
-                        cAdapter.setList(temp);
+                        cAdapter.setList(temp,getString(R.string.comm),DrugList.this);
                         recyclerView.setAdapter(cAdapter);
                     } else if (md) {
                         Cursor cursor = myDatabase.readData("Drugs");
@@ -174,7 +195,7 @@ public class DrugList extends AppCompatActivity {
                                 MyDruglistComm.add(cursor.getString(0));
                             }
                             temp = MyDruglistComm;
-                            cAdapter.setList(temp);
+                            cAdapter.setList(temp,getString(R.string.gen),DrugList.this);
                             recyclerView.setAdapter(cAdapter);
 
                     }
@@ -198,7 +219,7 @@ public class DrugList extends AppCompatActivity {
                                 MyDruglistComm.add(cursor.getString(0));
                             }
                             temp = MyDruglistComm;
-                            cAdapter.setList(temp);
+                            cAdapter.setList(temp,getString(R.string.comm),DrugList.this);
                             recyclerView.setAdapter(cAdapter);
                     }
                     else if(gn){
@@ -208,7 +229,7 @@ public class DrugList extends AppCompatActivity {
                                 MyDruglistGen.add(cursor.getString(0));
                             }
                             temp = MyDruglistGen;
-                            cAdapter.setList(temp);
+                            cAdapter.setList(temp,getString(R.string.gen),DrugList.this);
                             recyclerView.setAdapter(cAdapter);
 
                     }
@@ -226,12 +247,12 @@ public class DrugList extends AppCompatActivity {
                     AZlist.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                     if(cn){
                         temp = DruglistComm;
-                        cAdapter.setList(temp);
+                        cAdapter.setList(temp,getString(R.string.comm),DrugList.this);
                         recyclerView.setAdapter(cAdapter);
                     }
                     else if(gn){
                         temp = DruglistGen;
-                        cAdapter.setList(temp);
+                        cAdapter.setList(temp,getString(R.string.gen),DrugList.this);
                         recyclerView.setAdapter(cAdapter);
 
                     }

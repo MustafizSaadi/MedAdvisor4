@@ -1,5 +1,7 @@
 package com.example.ludwigprandtl.medadvisor;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,7 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -17,10 +21,14 @@ public class DrugRecyclerView extends RecyclerView.Adapter <DrugRecyclerView.Dru
 
     ArrayList<String> list;
     ArrayList<String> listFull;
+    String activity;
+    Context context;
 
-    void setList(ArrayList<String> list){
+    void setList(ArrayList<String> list,String activity,Context context){
         this.list = list;
         listFull = new ArrayList<>(list);
+        this.activity = activity;
+        this.context = context;
     }
 
     @NonNull
@@ -33,9 +41,25 @@ public class DrugRecyclerView extends RecyclerView.Adapter <DrugRecyclerView.Dru
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DrugsViewHolder drugsViewHolder, int i) {
+    public void onBindViewHolder(@NonNull DrugsViewHolder drugsViewHolder, final int i) {
         String data = list.get(i);
         drugsViewHolder.textView.setText(data);
+        drugsViewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,"item clicked",Toast.LENGTH_SHORT).show();
+                if(activity.equals("CommercialName")){
+                    Intent intent = new Intent(context,DrugInfoComm.class);
+                    intent.putExtra("Data",list.get(i));
+                    context.startActivity(intent);
+                }
+                else if(activity.equals("GenericName")){
+                    Intent intent = new Intent(context,DrugInfoGen.class);
+                    intent.putExtra("Data",list.get(i));
+                    context.startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override
@@ -81,9 +105,11 @@ public class DrugRecyclerView extends RecyclerView.Adapter <DrugRecyclerView.Dru
 
     public class DrugsViewHolder extends RecyclerView.ViewHolder{
         TextView textView;
+        LinearLayout linearLayout;
         public DrugsViewHolder(@NonNull View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.textViewId);
+            linearLayout = itemView.findViewById(R.id.diseases_list_id);
         }
     }
 }

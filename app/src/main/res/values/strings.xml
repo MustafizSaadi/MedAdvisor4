@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MedAdvisor</string>
+    <string name="comm">CommercialName</string>
+    <string name="gen">GenericName</string>
 </resources>

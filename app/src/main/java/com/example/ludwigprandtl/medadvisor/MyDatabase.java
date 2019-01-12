@@ -17,7 +17,7 @@ public class MyDatabase extends SQLiteOpenHelper implements Serializable {
     private static final int Version_Number=4;
     //private static final String ID="_id";
     private static final String symptom = "Selected_Symptoms";
-    private static final String drug = "MyDrug";
+    private static final String drug = "MyDrugs";
     private static final String gen = "MyGen";
     private Context context;
     public MyDatabase(Context context) {
@@ -63,12 +63,12 @@ public class MyDatabase extends SQLiteOpenHelper implements Serializable {
         }
         else if(table.equals(Table_Name2))
         {
-            contentValues.put(Table_Name2, s);
+            contentValues.put(drug, s);
             long rowId = sqLiteDatabase.insert(Table_Name2, null, contentValues);
             return rowId;
         }
         else{
-            contentValues.put(Table_Name3, s);
+            contentValues.put(gen, s);
             long rowId = sqLiteDatabase.insert(Table_Name3, null, contentValues);
             return rowId;
         }
@@ -109,7 +109,7 @@ public class MyDatabase extends SQLiteOpenHelper implements Serializable {
         }
         else
         {
-            long row_id = sqLiteDatabase.delete(Table_Name2, gen+ "=?", new String[]{data});
+            long row_id = sqLiteDatabase.delete(Table_Name3, gen+ "=?", new String[]{data});
             return  row_id;
         }
 

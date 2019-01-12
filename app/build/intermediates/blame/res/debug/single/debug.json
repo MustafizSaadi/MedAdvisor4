@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-ldrtl-mdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_btn_colored_material.xml.flat",
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
@@ -208,12 +208,12 @@
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-ldrtl-xxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -252,24 +252,24 @@
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\abcdc165d144e22c028d5ebb7a1e5cf3\\res\\layout\\notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
-        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
-    },
-    {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
+        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_title_material.xml.flat",
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -300,16 +300,16 @@
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_googleg_standard_color_18.png.flat",
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\3ab2e545ae4e3d204cf8a5d6ed403d04\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
     },
     {
-        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -344,12 +344,12 @@
         "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "C:\\Users\\Ludwig Prandtl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\1a8843fd3a851e786900c310f93e6ee8\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "D:\\Saadi\\2-2\\AppDevelopment\\MyCards-master\\MedAdvisor4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
