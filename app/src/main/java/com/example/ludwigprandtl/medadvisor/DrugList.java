@@ -1,15 +1,21 @@
 package com.example.ludwigprandtl.medadvisor;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.renderscript.Sampler;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
@@ -25,7 +31,7 @@ import java.util.ArrayList;
 
 import static com.example.ludwigprandtl.medadvisor.R.color.colorPrimary;
 
-public class DrugList extends AppCompatActivity {
+public class DrugList extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Button AZlist,myDrug,CommercialName,GenericName;
     RecyclerView recyclerView;
@@ -38,7 +44,18 @@ public class DrugList extends AppCompatActivity {
     DatabaseReference rootRef;
     DatabaseReference databaseReference;
     MyDatabase myDatabase;
+    DrawerLayout drawerLayout ;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    NavigationView navigationView;
     boolean az,md,cn,gn;
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -71,6 +88,15 @@ public class DrugList extends AppCompatActivity {
         CommercialName = findViewById(R.id.Commercial_Name);
         GenericName = findViewById(R.id.Generic_Name);
         recyclerView = findViewById(R.id.drugs_list);
+        drawerLayout = findViewById(R.id.layout_drug_list);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.Open,R.string.Close);
+        navigationView = findViewById(R.id.drug_list_navigation);
+
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(this);
+
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         cAdapter = new DrugRecyclerView();
@@ -267,4 +293,13 @@ public class DrugList extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        if(id == R.id.Hm){
+            Intent intent = new Intent(this,Home.class);
+            startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        }
+        return false;
+    }
 }
