@@ -47,7 +47,7 @@ public class DrugRecyclerView extends RecyclerView.Adapter <DrugRecyclerView.Dru
         drugsViewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"item clicked",Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(context,"item clicked",Toast.LENGTH_SHORT).show();
                 if(activity.equals("CommercialName")){
                     Intent intent = new Intent(context,DrugInfoComm.class);
                     intent.putExtra("Data",list.get(i));

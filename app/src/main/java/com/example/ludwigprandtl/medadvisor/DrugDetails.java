@@ -1,8 +1,13 @@
 package com.example.ludwigprandtl.medadvisor;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -11,12 +16,23 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class DrugDetails extends AppCompatActivity {
+public class DrugDetails extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     TextView Headline,details;
     String title,headline,activity;
+    DrawerLayout drawerLayout ;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    NavigationView navigationView;
 
     DatabaseReference rootRef,databaseReference;
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +41,15 @@ public class DrugDetails extends AppCompatActivity {
 
         Headline = findViewById(R.id.drug_detail_name);
         details = findViewById(R.id.drug_details);
+
+        drawerLayout = findViewById(R.id.layout_drug_details);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.Open,R.string.Close);
+        navigationView = findViewById(R.id.drug_details_navigation);
+
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(this);
 
         rootRef = FirebaseDatabase.getInstance().getReference();
 
@@ -96,5 +121,15 @@ public class DrugDetails extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        if(id == R.id.Hm){
+            Intent intent = new Intent(this,Home.class);
+            startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        }
+        return false;
     }
 }

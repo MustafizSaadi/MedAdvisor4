@@ -1,8 +1,13 @@
 package com.example.ludwigprandtl.medadvisor;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -13,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class DiseaseDetails extends AppCompatActivity {
+public class DiseaseDetails extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     TextView DiseaseName;
     TextView Reasons;
     TextView Symptoms;
@@ -23,6 +28,17 @@ public class DiseaseDetails extends AppCompatActivity {
     DatabaseReference databaseReference;
     DatabaseReference rootRef;
     ArrayList<String> reason,symptom,MedTreat,NonMedTreat,Prevention;
+    DrawerLayout drawerLayout ;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    NavigationView navigationView;
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +50,16 @@ public class DiseaseDetails extends AppCompatActivity {
         MedicinalTreatment = findViewById(R.id.medicinal_treatment);
         NonMedicinalTreatment = findViewById(R.id.non_medicinal_treatment);
         Preventions = findViewById(R.id.preventions);
+
+        drawerLayout = findViewById(R.id.layout_disease_details);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.Open,R.string.Close);
+        navigationView = findViewById(R.id.disease_details_navigation);
+
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(this);
+
         rootRef = FirebaseDatabase.getInstance().getReference();
         databaseReference = rootRef.child("disease");
     }
@@ -113,5 +139,15 @@ public class DiseaseDetails extends AppCompatActivity {
             if(i!=reason.size()-1) ans+=",";
         }
         return ans;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        if(id == R.id.Hm){
+            Intent intent = new Intent(this,Home.class);
+            startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        }
+        return false;
     }
 }

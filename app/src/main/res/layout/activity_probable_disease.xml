@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProbableDisease"
-    android:orientation="vertical"
-    android:background="@color/White"
-    android:textColor="@color/Black">
+    android:id="@+id/layout_probable_disease"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/White"
+        android:textColor="@color/Black">
 
     <ListView
         android:id="@+id/ProbableDieases"
@@ -16,4 +22,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
 
-</LinearLayout>
+    </LinearLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/probable_disease_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_item_menu"
+        android:layout_gravity="start"
+        >
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

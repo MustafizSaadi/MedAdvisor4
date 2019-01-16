@@ -5,10 +5,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,25 +26,47 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Button button,symptoms_button,discardButton;
     TextView text2;
     ImageButton send;
     ListView listView;
     MyDatabase myDatabase;
+    DrawerLayout drawerLayout ;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    NavigationView navigationView;
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myDatabase = new MyDatabase(this);
+
+        drawerLayout = findViewById(R.id.layout_main);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.Open,R.string.Close);
+        navigationView = findViewById(R.id.main_navigation);
+
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(this);
+
        // myDatabase.clearData();
         SQLiteDatabase sqLiteDatabase = myDatabase.getWritableDatabase();
-        Toast.makeText(this, "I am in onCreate", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "I am in onCreate", Toast.LENGTH_SHORT).show();
     }
     protected void onStart() {
 
-        Toast.makeText(this, "I am in onStart", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "I am in onStart", Toast.LENGTH_SHORT).show();
         super.onStart();
         button = findViewById(R.id.add_symptom);
         button.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 listData.add(cursor.getString(0));
                 //Toast.makeText(EnterSymptoms.this,cursor.getString(1),Toast.LENGTH_LONG).show();
             }
-            Toast.makeText(MainActivity.this,""+listData.size(),Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(MainActivity.this,""+listData.size(),Toast.LENGTH_SHORT).show();
             CustomAdapter custom = new CustomAdapter(this,listData,listData.size());
             listView.setAdapter(custom);
             custom.notifyDataSetChanged();
@@ -114,6 +141,17 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        if(id == R.id.Hm){
+            Intent intent = new Intent(this,Home.class);
+            startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        }
+        return false;
+    }
+
     public class CustomAdapter extends BaseAdapter {
         ArrayList<String> symptoms_list = new ArrayList<>();
         LayoutInflater inflater;
@@ -164,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String selectedSymptom = getItem(position);
-                    Toast.makeText(context,""+selectedSymptom,Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(context,""+selectedSymptom,Toast.LENGTH_SHORT).show();
                     long rs= myDatabase.deleteData(selectedSymptom,"Symptoms");
 
                    /* if(rs>0)

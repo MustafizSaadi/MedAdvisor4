@@ -8,6 +8,9 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,7 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class DrugInfoGen extends AppCompatActivity {
+public class DrugInfoGen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     TextView drugGen,infoGen;
     Button reminderGen,indicationGen,contraIndicationGen,sideEffectsGen,precautionGen;
@@ -33,6 +36,9 @@ public class DrugInfoGen extends AppCompatActivity {
     MyDatabase myDatabase;
     SQLiteDatabase sqLiteDatabase;
     MenuItem starButton;
+    DrawerLayout drawerLayout ;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +55,15 @@ public class DrugInfoGen extends AppCompatActivity {
 
         rootRef = FirebaseDatabase.getInstance().getReference();
         databaseReference = rootRef.child("Drugs").child("GenericName");
+
+        drawerLayout = findViewById(R.id.layout_drug_info_gen);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.Open,R.string.Close);
+        navigationView = findViewById(R.id.drug_info_gen_navigation);
+
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(this);
 
         myDatabase = new MyDatabase(this);
         sqLiteDatabase = myDatabase.getWritableDatabase();
@@ -179,6 +194,9 @@ public class DrugInfoGen extends AppCompatActivity {
                 star = true;
             }
         }
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -205,5 +223,15 @@ public class DrugInfoGen extends AppCompatActivity {
 
 
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        if(id == R.id.Hm){
+            Intent intent = new Intent(this,Home.class);
+            startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        }
+        return false;
     }
 }

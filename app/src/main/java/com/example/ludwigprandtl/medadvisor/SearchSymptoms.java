@@ -3,9 +3,13 @@ package com.example.ludwigprandtl.medadvisor;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchSymptoms extends AppCompatActivity {
+public class SearchSymptoms extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ListView listview;
     SearchView searchView;
     DataContainer dataContainer;
@@ -34,6 +38,17 @@ public class SearchSymptoms extends AppCompatActivity {
     boolean[] checked;
     String arr[];
     ArrayAdapter<String> adapter;
+    DrawerLayout drawerLayout ;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    NavigationView navigationView;
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +56,14 @@ public class SearchSymptoms extends AppCompatActivity {
         setContentView(R.layout.activity_search_symptoms);
         listview = findViewById(R.id.SymptomsId);
         searchView = findViewById(R.id.search_symptom);
+        drawerLayout = findViewById(R.id.layout_search_symptoms);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.Open,R.string.Close);
+        navigationView = findViewById(R.id.search_symptoms_navigation);
+
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -49,7 +72,7 @@ public class SearchSymptoms extends AppCompatActivity {
 
         super.onStart();
         SymptomsList.clear();
-        Toast.makeText(SearchSymptoms.this,""+SymptomsList.size(),Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(SearchSymptoms.this,""+SymptomsList.size(),Toast.LENGTH_SHORT).show();
         adapter = new ArrayAdapter<String>(this, R.layout.disease_list, R.id.textViewId, SymptomsList);
         listview.setAdapter(adapter);
 
@@ -95,7 +118,7 @@ public class SearchSymptoms extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 final String[] value = {(String) adapter.getItem(position)};
                 final String extra[] = new String[5];
-                Toast.makeText(SearchSymptoms.this, value[0],Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(SearchSymptoms.this, value[0],Toast.LENGTH_SHORT).show();
                 databaseReference = rootRef.child("sym_clarity");
                 final String finalS_id = value[0];
                 fever_clarity.clear();
@@ -160,5 +183,15 @@ public class SearchSymptoms extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        if(id == R.id.Hm){
+            Intent intent = new Intent(this,Home.class);
+            startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        }
+        return false;
     }
 }

@@ -29,7 +29,7 @@ public class MyDatabase extends SQLiteOpenHelper implements Serializable {
     @Override
     public void onCreate(SQLiteDatabase db) {
         try {
-            Toast.makeText(context,"Database is Created",Toast.LENGTH_SHORT).show();
+           // Toast.makeText(context,"Database is Created",Toast.LENGTH_SHORT).show();
             db.execSQL("create table Symptoms (_id integer primary key AUTOINCREMENT,Selected_Symptoms varchar(20));");
             db.execSQL("create table Drugs (_id integer primary key AUTOINCREMENT, MyDrugs varchar(20));");
         }
