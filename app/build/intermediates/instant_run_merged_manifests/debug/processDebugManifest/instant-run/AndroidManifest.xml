@@ -24,6 +24,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.ludwigprandtl.medadvisor.ReminderMainActivity" />
+        <activity android:name="com.example.ludwigprandtl.medadvisor.AddEditCreateActivity" />
         <activity
             android:name="com.example.ludwigprandtl.medadvisor.MainActivity"
             android:label="Symptoms"
@@ -61,8 +63,7 @@
         <activity
             android:name="com.example.ludwigprandtl.medadvisor.DrugList"
             android:label="Drugs and Medication "
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
@@ -134,9 +135,6 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.1.0" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

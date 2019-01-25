@@ -11,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ReminderMainActivity"></activity>
+        <activity android:name=".AddEditCreateActivity" />
         <activity
             android:name=".MainActivity"
             android:label="Symptoms"
@@ -40,14 +42,15 @@
             android:name=".DrugInfoComm"
             android:label="Drug Info"
             android:screenOrientation="portrait" />
-        <activity android:name=".DrugInfoGen"
+        <activity
+            android:name=".DrugInfoGen"
             android:label="Drug Info"
             android:screenOrientation="portrait" />
         <activity android:name=".DrugDetails" />
-        <activity android:name=".DrugList"
+        <activity
+            android:name=".DrugList"
             android:label="Drugs and Medication "
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
