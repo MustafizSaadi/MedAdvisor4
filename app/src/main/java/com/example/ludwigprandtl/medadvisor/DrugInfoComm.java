@@ -142,6 +142,15 @@ public class DrugInfoComm extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
             }
         });
+
+        reminder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoComm.this,AddEditCreateActivity.class);
+                intent.putExtra("medName",medicine);
+                startActivity(intent);
+            }
+        });
     }
 
     private void fetchData() {

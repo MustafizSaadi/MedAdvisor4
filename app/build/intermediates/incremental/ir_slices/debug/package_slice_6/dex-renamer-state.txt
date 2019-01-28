@@ -1,4 +1,4 @@
-#Sat Jan 26 02:42:10 BDT 2019
-base.0=C\:\\Users\\user\\AndroidStudioProjects\\MedAdvisor4\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+#Sun Jan 27 13:10:11 BDT 2019
+base.0=C\:\\Users\\user\\AndroidStudioProjects\\MedAdvisor\\MedAdvisor4\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\user\\AndroidStudioProjects\\MedAdvisor4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bg\\values-bg.xml",
+            "outputFile": "C:\\Users\\user\\AndroidStudioProjects\\MedAdvisor\\MedAdvisor4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bg\\values-bg.xml",
             "map": [
                 {
                     "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\44af30565601f7c26a8880795d8a5292\\res\\values-bg\\values-bg.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\user\\AndroidStudioProjects\\MedAdvisor4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\user\\AndroidStudioProjects\\MedAdvisor\\MedAdvisor4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
                     "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-28.0.0.aar\\e5327f1c0e46d858c728280e046df0d2\\res\\values-v23\\values-v23.xml",

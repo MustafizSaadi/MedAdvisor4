@@ -39,6 +39,7 @@ public class AddEditCreateActivity extends AppCompatActivity {
     private AlertDialog.Builder alertDialogBuilder;
     ArrayList<SingleReminderTime> reminderTimesArray;
     CustomAdapter reminderTimesAdapter;
+    private String medNameForReminder;
 
     ReminderDBHelper reminderDBHelper;
     @Override
@@ -55,6 +56,13 @@ public class AddEditCreateActivity extends AppCompatActivity {
             Object singleReminderInfo = getIntent().getExtras().get("reminder");
             if (singleReminderInfo != null) {
                 this.singleReminderInfo = (SingleReminderInfo) singleReminderInfo;
+            }
+        }
+
+        if(getIntent().getExtras()!=null){
+            String temp = (String) getIntent().getExtras().get("medName");
+            if(temp!=null){
+                this.medNameForReminder = temp;
             }
         }
 
@@ -146,6 +154,9 @@ public class AddEditCreateActivity extends AppCompatActivity {
 
     public void bindValuesToInputs()
     {
+        if(medNameForReminder!=null){
+            medName.setText(medNameForReminder);
+        }
         if(singleReminderInfo!=null){
             int iid = singleReminderInfo.getId();
 
