@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -66,7 +67,7 @@ public class AddEditCreateActivity extends AppCompatActivity {
             }
         }
 
-        bindValuesToInputs();
+
         setTitle(singleReminderInfo == null ? R.string.add_reminder : R.string.edit_reminder);
 
         ArrayAdapter<String> quantityAdapter = new ArrayAdapter<String>(this,R.layout.dose_quantity_view,R.id.single_quantity_id, doseQuantities);
@@ -119,7 +120,7 @@ public class AddEditCreateActivity extends AppCompatActivity {
                 timePickerDialog.show();
             }
         });
-
+        bindValuesToInputs();
         initializeStartDate();
     }
 
@@ -150,6 +151,8 @@ public class AddEditCreateActivity extends AppCompatActivity {
         reminderTimesListView = findViewById(R.id.reminder_times_list_id);
         startDate = findViewById(R.id.start_date_id);
         endDate = findViewById(R.id.end_date_id);
+        selectTime = findViewById(R.id.select_time_id);
+        singleTime = findViewById(R.id.single_time_id);
     }
 
     public void bindValuesToInputs()
@@ -168,9 +171,9 @@ public class AddEditCreateActivity extends AppCompatActivity {
                 dose = dose.substring(0,idx);
             }
             customDose.setText(dose);
-            //doseQuantitiesSpinner.setSelection(((ArrayAdapter<String>) doseQuantitiesSpinner.getAdapter()).getPosition(quantity));
+            doseQuantitiesSpinner.setSelection(((ArrayAdapter<String>) doseQuantitiesSpinner.getAdapter()).getPosition(quantity));
 
-            /*Cursor cursor1 = reminderDBHelper.getStartAndEndDate(iid);
+            Cursor cursor1 = reminderDBHelper.getStartAndEndDate(iid);
             Cursor cursor2 = reminderDBHelper.getReminderTimes(iid);
 
             String stDate,edDate;
@@ -188,7 +191,7 @@ public class AddEditCreateActivity extends AppCompatActivity {
                 reminderTimesAdapter.notifyDataSetChanged();
                 reminderTimesAdapter.updateRemindersList(reminderTimesArray);
             }
-            selectTime.setText(R.string.time_add);*/
+            selectTime.setText(R.string.time_add);
         }
     }
 

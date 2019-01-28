@@ -154,7 +154,7 @@ public class ReminderDBHelper extends SQLiteOpenHelper {
 
     public Cursor getStartAndEndDate(int id){
         String query = "SELECT start_date,end_date " +
-                        "FROM" + TABLE_NAME_1 + "  " +
+                        "FROM " + TABLE_NAME_1 + "  " +
                         "WHERE _id = " + id ;
 
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
@@ -163,8 +163,8 @@ public class ReminderDBHelper extends SQLiteOpenHelper {
     }
 
     public Cursor getReminderTimes(int id){
-        String query = "SELECT DISTINCT _med_time" +
-                "FROM" + TABLE_NAME_2 + "  " +
+        String query = "SELECT DISTINCT _med_time " +
+                "FROM " + TABLE_NAME_2 + "  " +
                 "WHERE _id = " + id ;
 
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
