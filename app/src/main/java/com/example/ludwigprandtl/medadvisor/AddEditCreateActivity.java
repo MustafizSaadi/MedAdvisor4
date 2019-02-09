@@ -70,7 +70,7 @@ public class AddEditCreateActivity extends AppCompatActivity {
 
         setTitle(singleReminderInfo == null ? R.string.add_reminder : R.string.edit_reminder);
 
-        ArrayAdapter<String> quantityAdapter = new ArrayAdapter<String>(this,R.layout.dose_quantity_view,R.id.single_quantity_id, doseQuantities);
+        ArrayAdapter<String> quantityAdapter = new ArrayAdapter<>(this,R.layout.dose_quantity_view,R.id.single_quantity_id, doseQuantities);
         doseQuantitiesSpinner.setAdapter(quantityAdapter);
 
         reminderTimesArray = new ArrayList<>();
@@ -221,7 +221,7 @@ public class AddEditCreateActivity extends AppCompatActivity {
             try{
                 Toast.makeText(this,"Please select a time",Toast.LENGTH_SHORT).show();
             }catch (Exception e){
-                Toast.makeText(this,"Exception " + e ,Toast.LENGTH_SHORT).show();;
+                Toast.makeText(this,"Exception " + e ,Toast.LENGTH_SHORT).show();
             }
             allInputsValid = false;
         }
