@@ -25,6 +25,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array dose_quantities
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -164,16 +165,22 @@ attr collapsedTitleTextAppearance
 attr color
 attr colorAccent
 attr colorBackgroundFloating
+attr colorBottomText
+attr colorBottomTextSelected
 attr colorButtonNormal
 attr colorControlActivated
 attr colorControlHighlight
 attr colorControlNormal
 attr colorError
+attr colorMiddleText
+attr colorMiddleTextSelected
 attr colorPrimary
 attr colorPrimaryDark
 attr colorScheme
 attr colorSecondary
 attr colorSwitchThumbNormal
+attr colorTopText
+attr colorTopTextSelected
 attr commitIcon
 attr constraintSet
 attr constraint_referenced_ids
@@ -431,6 +438,8 @@ attr searchViewStyle
 attr seekBarStyle
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
+attr selectedDateBackground
+attr selectorColor
 attr showAsAction
 attr showDividers
 attr showMotionSpec
@@ -439,6 +448,9 @@ attr showTitle
 attr singleChoiceItemLayout
 attr singleLine
 attr singleSelection
+attr sizeBottomText
+attr sizeMiddleText
+attr sizeTopText
 attr snackbarButtonStyle
 attr snackbarStyle
 attr spanCount
@@ -517,7 +529,9 @@ attr textAppearanceSmallPopupMenu
 attr textAppearanceSubtitle1
 attr textAppearanceSubtitle2
 attr textColorAlertDialogListItem
+attr textColorNormal
 attr textColorSearchUrl
+attr textColorSelected
 attr textEndPadding
 attr textInputStyle
 attr textStartPadding
@@ -789,6 +803,7 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen app_bar_height
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -845,6 +860,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -921,6 +937,11 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
+dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -1015,6 +1036,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_add_white_18dp
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1044,16 +1066,32 @@ drawable drugs_and_medication1
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_access_time_black_24dp
+drawable ic_action_name
+drawable ic_action_name_horizontal
+drawable ic_alarm_black_24dp
+drawable ic_alert
+drawable ic_check_black_24dp
+drawable ic_check_circle_black_24dp
 drawable ic_chevron_right_black_24dp
+drawable ic_circle_white_8dp
 drawable ic_close_black_24dp
+drawable ic_close_white_24dp
+drawable ic_date_range_black_24dp
+drawable ic_delete_black_24dp
+drawable ic_description_black_24dp
+drawable ic_edit_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_not_reminded_grey
 drawable ic_search_black_24dp
 drawable ic_send_black_24dp
+drawable ic_skip_alert_red
+drawable ic_snooze_alert_grey
 drawable ic_star_black_24dp
+drawable ic_taken_green
 drawable med_advisor1
 drawable medication_reminder1
 drawable mtrl_snackbar_background
@@ -1111,6 +1149,7 @@ id add
 id addReminder
 id addReminderGen
 id add_symptom
+id additional_info_id
 id adjust_height
 id adjust_width
 id alertTitle
@@ -1123,12 +1162,15 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id calendarView
 id cancel_action
 id center
 id center_horizontal
 id center_vertical
 id chains
 id checkbox
+id choose_end_date_id
+id choose_start_date_id
 id chronometer
 id clip_horizontal
 id clip_vertical
@@ -1141,9 +1183,12 @@ id contra_indicationsGen
 id coordinator
 id custom
 id customPanel
+id custom_dose_id
 id dark
+id date_of_today_id
 id decor_content_parent
 id default_activity_button
+id delete_reminder_button_id
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1155,7 +1200,11 @@ id disableHome
 id discardButton
 id disease_details_navigation
 id diseases_list_id
+id done_reminder
+id dosage_description_view_id
 id dosage_info
+id dose_info_id
+id dose_quantities_id
 id drug
 id drug_detail_name
 id drug_details
@@ -1167,10 +1216,13 @@ id drug_list_navigation
 id drugs_list
 id drugs_medication
 id edit_query
+id edit_reminder_button_id
+id edit_time
 id empty
 id empty1
 id empty_id
 id end
+id end_date_id
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
@@ -1182,11 +1234,18 @@ id fill_horizontal
 id fill_vertical
 id filled
 id fixed
+id floatingActionButton2
 id forever
 id ghost_view
 id gone
 id group_divider
 id groups
+id hc_events_recyclerView
+id hc_layoutContent
+id hc_selector
+id hc_text_bottom
+id hc_text_middle
+id hc_text_top
 id home
 id homeAsUp
 id icon
@@ -1211,6 +1270,7 @@ id layout_drug_list
 id layout_main
 id layout_probable_disease
 id layout_search_symptoms
+id layout_with_calender
 id left
 id light
 id line1
@@ -1220,9 +1280,15 @@ id list_item
 id main_navigation
 id market_price
 id masked
+id med_dose_info_id
+id med_info_id
+id med_info_recycler_view_id
+id med_name_id
+id med_time_view_id
 id media_actions
 id medication_reminder
 id medicinal_treatment
+id medicine_name_view_id
 id message
 id middle
 id mini
@@ -1256,12 +1322,17 @@ id progress_circular
 id progress_horizontal
 id radio
 id reasons
+id reminder_status_image_id
+id reminder_time_view_layout
+id reminder_times_id
+id reminder_times_list_id
 id right
 id right_icon
 id right_side
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
+id schedule_view_id
 id screen
 id scroll
 id scrollIndicatorDown
@@ -1282,6 +1353,7 @@ id search_symptom
 id search_symptoms_navigation
 id search_voice_btn
 id select_dialog_listview
+id select_time_id
 id selected
 id send
 id shortcut
@@ -1290,11 +1362,17 @@ id showHome
 id showTitle
 id side_effects
 id side_effectsGen
+id single_quantity_id
+id single_time_id
+id skip_button_id
+id skip_view_id
 id smallLabel
 id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id snooze_button_id
+id snooze_view_id
 id spacer
 id split_action_bar
 id spread
@@ -1305,7 +1383,9 @@ id src_over
 id standard
 id starButton
 id start
+id start_date_id
 id status_bar_latest_event_content
+id status_view_id
 id stretch
 id submenuarrow
 id submit_area
@@ -1315,6 +1395,8 @@ id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id take_button_id
+id take_view_id
 id text
 id text2
 id textSpacerNoButtons
@@ -1395,6 +1477,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_edit_create
 layout activity_disease_details
 layout activity_drug_details
 layout activity_drug_info_comm
@@ -1403,6 +1486,7 @@ layout activity_drug_list
 layout activity_home
 layout activity_main
 layout activity_probable_disease
+layout activity_reminder_main
 layout activity_search_symptoms
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1419,8 +1503,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout disease_list
+layout dose_quantity_view
 layout empty
 layout empty1
+layout hc_item_calendar
+layout hc_item_calendar_old
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1438,11 +1525,15 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout remainder_details_in_dialog
+layout reminder_info_viewer_in_list
+layout reminder_time_view
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout temp_text
+menu menu_add_edit_create
 menu menu_with_search
 menu nav_item_menu
 menu save_medicine
@@ -1451,6 +1542,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap med_advisor1
 string Close
+string Dose_info
 string Open
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -1491,9 +1583,13 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_reminder
+string additional_info
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
+string canceling_reminder_alert_message
+string canceling_reminder_alert_tile
 string character_counter_content_description
 string character_counter_pattern
 string comm
@@ -1515,7 +1611,13 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string custom_dose
 string default_web_client_id
+string deleting_reminder_alert_message
+string deleting_reminder_alert_tile
+string edit_reminder
+string end_date_choose
+string end_date_select
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string firebase_database_url
@@ -1526,6 +1628,8 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
+string med_info
+string med_info_hint
 string mtrl_chip_close_icon_content_description
 string password_toggle_content_description
 string path_password_eye
@@ -1533,8 +1637,13 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
+string reminders
+string required
 string search_menu_title
+string start_date_choose
 string status_bar_notification_info_overflow
+string time_add
+string time_select
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -1542,6 +1651,8 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style AppTheme
+style AppTheme_AppBarOverlay
+style AppTheme_PopupOverlay
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -2080,6 +2191,7 @@ styleable FontFamilyFont android_font android_fontWeight android_fontStyle andro
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
+styleable HorizontalCalendarView colorBottomText colorBottomTextSelected colorMiddleText colorMiddleTextSelected colorTopText colorTopTextSelected selectedDateBackground selectorColor sizeBottomText sizeMiddleText sizeTopText textColorNormal textColorSelected
 styleable LinearConstraintLayout android_orientation
 styleable LinearLayoutCompat android_gravity android_orientation android_baselineAligned android_baselineAlignedChildIndex android_weightSum divider dividerPadding measureWithLargestChild showDividers
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight

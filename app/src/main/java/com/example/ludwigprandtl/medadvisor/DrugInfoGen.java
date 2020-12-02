@@ -121,6 +121,14 @@ public class DrugInfoGen extends AppCompatActivity implements NavigationView.OnN
                 startActivity(intent);
             }
         });
+        reminderGen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DrugInfoGen.this,AddEditCreateActivity.class);
+                intent.putExtra("medName",medicine);
+                startActivity(intent);
+            }
+        });
     }
 
     private void fetchData() {

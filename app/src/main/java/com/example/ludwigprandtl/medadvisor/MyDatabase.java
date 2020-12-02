@@ -14,7 +14,7 @@ public class MyDatabase extends SQLiteOpenHelper implements Serializable {
     private static final String Table_Name = "Symptoms";
     private static final String Table_Name2 = "Drugs";
     private static final String Table_Name3 = "Gen";
-    private static final int Version_Number=4;
+    private static final int Version_Number=5;
     //private static final String ID="_id";
     private static final String symptom = "Selected_Symptoms";
     private static final String drug = "MyDrugs";
